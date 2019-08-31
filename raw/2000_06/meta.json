@@ -1,0 +1,30 @@
+{
+  "accessed": "2019-08-31T07:57:11.359252",
+  "date": "2000/06",
+  "files": [
+    {
+      "file": "vacancies.html",
+      "filetype": "html",
+      "report": "vacancies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2000/06/vacancies/html"
+    },
+    {
+      "file": "emergencies.html",
+      "filetype": "html",
+      "report": "emergencies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2000/06/emergencies/html"
+    },
+    {
+      "file": "summary.html",
+      "filetype": "html",
+      "report": "summary",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2000/06/summary/html"
+    },
+    {
+      "file": "future.html",
+      "filetype": "html",
+      "report": "future",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2000/06/future/html"
+    }
+  ]
+}

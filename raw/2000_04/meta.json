@@ -1,0 +1,24 @@
+{
+  "accessed": "2019-08-31T07:56:06.182012",
+  "date": "2000/04",
+  "files": [
+    {
+      "file": "vacancies.pdf",
+      "filetype": "pdf",
+      "report": "vacancies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2000/04/vacancies/pdf"
+    },
+    {
+      "file": "summary.pdf",
+      "filetype": "pdf",
+      "report": "summary",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2000/04/summary/pdf"
+    },
+    {
+      "file": "future.pdf",
+      "filetype": "pdf",
+      "report": "future",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2000/04/future/pdf"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "accessed": "2019-08-31T09:34:14.922275",
+  "date": "2015/06",
+  "files": [
+    {
+      "file": "vacancies.html",
+      "filetype": "html",
+      "report": "vacancies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2015/06/vacancies"
+    },
+    {
+      "file": "emergencies.html",
+      "filetype": "html",
+      "report": "emergencies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2015/06/emergencies"
+    },
+    {
+      "file": "summary.html",
+      "filetype": "html",
+      "report": "summary",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2015/06/summary"
+    },
+    {
+      "file": "future.html",
+      "filetype": "html",
+      "report": "future",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2015/06/future"
+    },
+    {
+      "file": "confirmations.html",
+      "filetype": "html",
+      "report": "confirmations",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2015/06/confirmations"
+    }
+  ]
+}

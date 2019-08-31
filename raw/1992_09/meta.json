@@ -1,0 +1,24 @@
+{
+  "accessed": "2019-08-31T06:48:06.750359",
+  "date": "1992/09",
+  "files": [
+    {
+      "file": "vacancies.pdf",
+      "filetype": "pdf",
+      "report": "vacancies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/1992/09/vacancies/pdf"
+    },
+    {
+      "file": "emergencies.pdf",
+      "filetype": "pdf",
+      "report": "emergencies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/1992/09/emergencies/pdf"
+    },
+    {
+      "file": "future.pdf",
+      "filetype": "pdf",
+      "report": "future",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/1992/09/future/pdf"
+    }
+  ]
+}

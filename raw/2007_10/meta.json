@@ -1,0 +1,30 @@
+{
+  "accessed": "2019-08-31T08:34:48.027261",
+  "date": "2007/10",
+  "files": [
+    {
+      "file": "vacancies.pdf",
+      "filetype": "pdf",
+      "report": "vacancies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2007/10/vacancies/pdf"
+    },
+    {
+      "file": "emergencies.pdf",
+      "filetype": "pdf",
+      "report": "emergencies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2007/10/emergencies/pdf"
+    },
+    {
+      "file": "summary.pdf",
+      "filetype": "pdf",
+      "report": "summary",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2007/10/summary/pdf"
+    },
+    {
+      "file": "confirmations.pdf",
+      "filetype": "pdf",
+      "report": "confirmations",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2007/10/confirmations/pdf"
+    }
+  ]
+}

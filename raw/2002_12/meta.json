@@ -1,0 +1,30 @@
+{
+  "accessed": "2019-08-31T08:15:47.867110",
+  "date": "2002/12",
+  "files": [
+    {
+      "file": "vacancies.pdf",
+      "filetype": "pdf",
+      "report": "vacancies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2002/12/vacancies/pdf"
+    },
+    {
+      "file": "emergencies.pdf",
+      "filetype": "pdf",
+      "report": "emergencies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2002/12/emergencies/pdf"
+    },
+    {
+      "file": "summary.pdf",
+      "filetype": "pdf",
+      "report": "summary",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2002/12/summary/pdf"
+    },
+    {
+      "file": "future.pdf",
+      "filetype": "pdf",
+      "report": "future",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2002/12/future/pdf"
+    }
+  ]
+}

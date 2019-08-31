@@ -1,0 +1,36 @@
+{
+  "accessed": "2019-08-31T08:36:09.908411",
+  "date": "2008/02",
+  "files": [
+    {
+      "file": "vacancies.pdf",
+      "filetype": "pdf",
+      "report": "vacancies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2008/02/vacancies/pdf"
+    },
+    {
+      "file": "emergencies.pdf",
+      "filetype": "pdf",
+      "report": "emergencies",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2008/02/emergencies/pdf"
+    },
+    {
+      "file": "summary.pdf",
+      "filetype": "pdf",
+      "report": "summary",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2008/02/summary/pdf"
+    },
+    {
+      "file": "future.pdf",
+      "filetype": "pdf",
+      "report": "future",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2008/02/future/pdf"
+    },
+    {
+      "file": "confirmations.pdf",
+      "filetype": "pdf",
+      "report": "confirmations",
+      "url": "https://www.uscourts.gov/judges-judgeships/judicial-vacancies/archive-judicial-vacancies/2008/02/confirmations/pdf"
+    }
+  ]
+}
