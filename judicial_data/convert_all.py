@@ -6,28 +6,26 @@ from typing import List
 from judicial_data.parse_html import parse_html
 from judicial_data.parse_pdf import PDFParser
 
-
 def convert_all(files: List[str] = None):
     if not files:
         files = sorted(glob('raw/*/vacancies.*', recursive=True))
 
     for filename in files:
-        _, _, base = filename.split('/')
-        _, ext = splitext(base)
+        _, base, fn = filename.split('/')
+        _, ext = splitext(fn)
 
         try:
             if ext == '.html':
-                continue
                 print(filename)
                 result = parse_html(filename)
             elif ext == '.pdf':
                 print(filename)
-                #result = parse_pdf(filename)
-                PDFParser(filename)
+                result = PDFParser(filename).parse_doc()
             else:
                 raise ValueError()
 
-            #result.to_csv(f'data/{base}.csv', index=False)
+            if result is not None:
+                result.to_csv(f'data/{base}.csv', index=False)
         except ValueError:
             #print(f'error')
             raise

@@ -10,6 +10,7 @@ import pandas as pd
 from more_itertools import peekable
 
 from judicial_data import annotate_pdf
+from judicial_data.pdf_overrides import override_pdf_entry
 
 FORMATS = ['%b %d, %Y', '%B %d, %Y']
 PAGE_ELEM = r'.//{http://www.w3.org/1999/xhtml}page'
@@ -56,8 +57,8 @@ class PDFParser:
     @staticmethod
     def read_pdf_as_html(pdf_file):
         with tempfile.TemporaryDirectory() as temp_dir:
-            #result_file = path.join(temp_dir, 'result.html')
-            result_file = 'temp.html'
+            result_file = path.join(temp_dir, 'result.html')
+            #result_file = 'temp.html'
 
             subprocess.check_call([
                 'pdftotext',
@@ -95,7 +96,7 @@ class PDFParser:
             sorted(texts, key=(lambda x: (x.page, x.y_min, x.x_min))))
 
     def get_column_from_x(self, x):
-        return next(c for c, x_ in reversed(list(self.col_map.items())) if x_ <= x)
+        return next((c for c, x_ in reversed(list(self.col_map.items())) if x_ <= x), None)
 
     def parse_doc(self):
         self.rows = []
@@ -120,9 +121,12 @@ class PDFParser:
             elif self.parse_date(alltext):
                 self.annotator.annotate_group(group, annotate_pdf.GREEN)
                 date = self.parse_date(alltext)
+            elif self.parse_date(group[0].text):
+                self.annotator.annotate_text(group[0], annotate_pdf.GREEN)
+                date = self.parse_date(group[0].text)
             elif group[0].text.endswith(' Circuit') or alltext == 'International Trade':
                 self.annotator.annotate_group(group, annotate_pdf.GREEN)
-                circuit = group[0].text
+                circuit = re.sub(r'\s+', ' ', group[0].text)
                 court = None
             elif alltext == 'VACANCIES':
                 stop_collecting = True # Hit end of document, don’t treat as table
@@ -133,18 +137,26 @@ class PDFParser:
                     print('no col mappings')
                     continue
                 r = {
-                    self.get_column_from_x(t.x_min): t.text
+                    self.get_column_from_x(t.x_min): re.sub(r'\s+', ' ', t.text)
                     for t in group
                 }
+
+                r = override_pdf_entry(r)
+
+                if len(r) == 1 and ('Court' in r) or ('Circuit' in r):
+                    try:
+                        court = r['Court']
+                    except KeyError:
+                        court = r['Circuit']
+                    self.annotator.annotate_group(group, annotate_pdf.PURPLE)
+                    continue
+                elif len(r) < 3:
+                    self.annotator.annotate_group(group, annotate_pdf.GREY)
+                    continue
 
                 for c in ['Vacancy Date', 'Nomination']:
                     if c in r:
                         r[c] = pd.Timestamp(r[c]).date()
-
-                if len(r) == 1 and 'Court' in r:
-                    court = r['Court']
-                    self.annotator.annotate_group(group, annotate_pdf.PURPLE)
-                    continue
 
                 if 'Nominee' not in r:
                     r['Nominee'] = None
@@ -160,6 +172,7 @@ class PDFParser:
                 r['date'] = date
                 self.annotator.annotate_group(group, annotate_pdf.BLUE)
                 self.rows.append(r)
+        return pd.DataFrame(self.rows)
 
     def create_col_map(self, group):
         col_mappings = {}
@@ -171,7 +184,7 @@ class PDFParser:
             name = t.text
             name = re.sub(r'\s+', ' ', name)
             if last_max is None:
-                loc = t.x_min
+                loc = t.x_min - 50
             else:
                 loc = (last_max + t.x_min) / 2
             last_max = t.x_max

@@ -15,9 +15,12 @@ COLUMNS = [
 
 
 def parse_html(html_path: str):
-    result, = pd.read_html(html_path, header=None, match=MATCH_STRING)
-    if result.columns[0] != 'Court':
-        result, = pd.read_html(html_path, header=1, match=MATCH_STRING)
+    try:
+        result, = pd.read_html(html_path, header=None, match=MATCH_STRING)
+        if result.columns[0] != 'Court':
+            result, = pd.read_html(html_path, header=1, match=MATCH_STRING)
+    except ValueError:
+        return None
 
     result.columns = COLUMNS
 
