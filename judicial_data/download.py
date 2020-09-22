@@ -50,7 +50,7 @@ def download_data(begin: pd.Timestamp = MIN_DATE, end: pd.Timestamp = None):
         if path.exists(meta_file):
             print(f'Skipping {ym} (already exists).')
             continue
-        makedirs(dirname)
+        makedirs(dirname, exist_ok=True)
         print(dirname)
 
         for report_part in REPORT_PARTS:
